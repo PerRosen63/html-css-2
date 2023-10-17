@@ -1,0 +1,26 @@
+/*reset figure*/
+figure {
+    margin: 0;
+}
+
+header, main {
+    padding: 8px;
+}
+
+header {
+    border: 1px solid red;
+    & > * {
+        border: 1px solid red;
+    }
+}
+
+article {
+    min-height: 100vh;
+    border: 1px solid black;
+    display: grid;
+    gap: 8px;
+    section {
+        border: 1px solid orange;
+    }
+    
+}

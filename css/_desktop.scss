@@ -1,0 +1,30 @@
+main {
+    background-color: grey;
+    article {
+        section {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);    
+            gap: 12px;
+            div {
+                border: 1px solid black;
+            }
+            &.row1 {
+                .page-title {
+                    grid-column: span 4;
+            }
+                .text {
+                    grid-column: span 7;
+                }
+            }
+            &.row2 {
+                .image {
+                    grid-column: span 5;
+            }
+                .text {
+                    grid-column: span 6;
+                }
+            }
+             
+        }
+    }
+}
