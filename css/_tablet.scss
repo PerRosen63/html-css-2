@@ -4,10 +4,17 @@ main {
 header {
     width: calc( 100vw / 12 - 26px );
     height: 100vh;
-    position: fixed;
     padding: 12px;
     flex-direction: column;
     justify-content: space-around;
+    nav {
+        margin: 0 auto;
+        .navmenu {
+            top: 0;
+            left: 8.3%;
+            width: 91.7%;
+        }
+    }
     h1 {
         writing-mode: vertical-rl;
         text-orientation: upright;

@@ -7,11 +7,37 @@ header {
     padding: 0 12px;
     border: 1px solid red;
     background-color: #000000;
+    position: fixed;
+    width: calc(100% - 24px);
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     & > * {
         border: 1px solid red;
+    }
+    nav {
+        button {
+            background-color: transparent;
+            width: 35px;
+            height: 35px;
+            border: 0;
+            span {
+                display: block;
+                width: 25px;
+                height: 3px;
+                background-color: yellow;
+                border-radius: 6px;
+                margin-bottom: 4px;
+            }
+        }
+        .navmenu {
+            position: fixed;
+            background-color: #ac76ff;
+            top: 85px;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+        }
     }
     h1 {
         color: #ffffff;
@@ -19,6 +45,27 @@ header {
         font-family: 'Jockey One', sans-serif;
     }
 }
+//Svårt att nästla
+input:checked + div button span {
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+input:checked + div button span:nth-child(2) {
+    opacity: 0;
+}
+input:checked + div button span:nth-child(1) {
+    transform: rotate(-45deg);
+}
+input:checked + div button span:nth-child(3) {
+    transform: rotate(45deg);
+}
+input + div .navmenu {
+    opacity: 1;
+}
+input:checked + div .navmenu {
+    opacity: 0;
+}
+
 
 article {
     min-height: 100vh;
