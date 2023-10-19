@@ -7,7 +7,7 @@ header {
     padding: 0 12px;
     border: 1px solid red;
     background-color: #000000;
-    position: fixed;
+    position: sticky;
     width: calc(100% - 24px);
     display: flex;
     flex-direction: row-reverse;
@@ -16,28 +16,45 @@ header {
         border: 1px solid red;
     }
     nav {
-        button {
+        position: relative;
+        display: flex;
+        align-items: center;
+        input {
+            position: absolute;
+            width: 38px;
+            height: 38px;
+            opacity: 0;
+            cursor: pointer;
+        }
+        div {
+            button {
             background-color: transparent;
-            width: 35px;
-            height: 35px;
+            width: 38px;
+            height: 38px;
             border: 0;
-            span {
-                display: block;
-                width: 25px;
-                height: 3px;
-                background-color: yellow;
-                border-radius: 6px;
-                margin-bottom: 4px;
+            pointer-events: none;
+                span {
+                    display: block;
+                    width: 25px;
+                    height: 3px;
+                    background-color: yellow;
+                    border-radius: 6px;
+                    margin-bottom: 4px;
+                }
+            }
+            .navmenu {
+                position: fixed;
+                background-color: #ac76ff;
+                top: 85px;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                visibility: hidden;
+                opacity: 0;
+                transition: opacity 2s cubic-bezier(0.075, 0.82, 0.165, 1);
             }
         }
-        .navmenu {
-            position: fixed;
-            background-color: #ac76ff;
-            top: 85px;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-        }
+        
     }
     h1 {
         color: #ffffff;
@@ -46,6 +63,9 @@ header {
     }
 }
 //Svårt att nästla
+input:checked + div button {
+    margin-bottom: 7px;
+}
 input:checked + div button span {
     position: absolute;
     transition: all 0.3s ease-in-out;
@@ -59,11 +79,10 @@ input:checked + div button span:nth-child(1) {
 input:checked + div button span:nth-child(3) {
     transform: rotate(45deg);
 }
-input + div .navmenu {
-    opacity: 1;
-}
+
 input:checked + div .navmenu {
-    opacity: 0;
+    visibility: visible;
+    opacity: 1;
 }
 
 
