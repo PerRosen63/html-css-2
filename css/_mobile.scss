@@ -87,13 +87,13 @@ input:checked + div .navmenu {
 
 
 article {
-    min-height: 100vh;
     padding-left: 12px;
     padding-right: 12px;
     border: 1px solid black;
-    display: grid;
-&.page1 {
-    background-color: yellow;
+    &.page1 {
+        min-height: 100vh;
+        display: grid;
+        background-color: yellow;
 }                        
     section {
         border: 1px solid orange;
@@ -103,6 +103,35 @@ article {
 }                        
     section {
         border: 1px solid orange;
+        .menu-wrapper {
+            display: grid;
+            grid-template-columns: repeat(11, 1fr);
+            grid-template-rows: repeat(14, 1fr);
+            grid-auto-flow: dense;
+                .menu-item {
+                    align-self: baseline;
+                }
+                .menu-item:nth-child(3n+1) {
+                    background-color: white;
+                    grid-column: span 10;
+                    margin-top: 5px;
+                    span {
+                        padding: 0 10px;
+                    }
+                }
+                .menu-item:nth-child(3n+2) {
+                    background-color: white;
+                    grid-column: span 10;
+                }
+                .menu-item:nth-child(3n+3) {
+                    background-color: white;
+                    grid-column: span 1;
+                    grid-row: span 2;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    align-self: normal;
+                }
+        }
     }
     
 }
