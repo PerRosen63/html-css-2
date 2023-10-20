@@ -92,4 +92,16 @@ main {
             }
         }
     }
+    .page3 {
+        margin-left: 8.33333%;
+        .booking {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .form-column, .contact-column {
+                width: 50%;
+            }
+        }
+    }
+
 }

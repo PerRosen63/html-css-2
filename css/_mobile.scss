@@ -135,3 +135,31 @@ article {
     }
     
 }
+.page3 {
+    .booking {
+        .form-column {
+            form {
+                > div {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+}
+.cookie-banner {
+    background-color: rgba(0, 0, 255, 0.9);
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    z-index: 999;
+    bottom: 0;
+    .cookie-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        .cookie-btns {
+            display: flex;
+        }
+    }
+}
