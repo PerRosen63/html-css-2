@@ -3,10 +3,10 @@ main {
 }
 header {
     position: fixed;
-    width: calc( 100% / 12 - 26px );
+    width: calc( 100% / 12 - 30px );
     height: 100vh;
     min-height: 650px;
-    padding: 12px;
+    padding: 16px;
     flex-direction: column;
     justify-content: space-around;
     nav {
@@ -32,12 +32,13 @@ main {
         section {
             display: grid;
             grid-template-columns: repeat(12, 1fr);    
-            gap: 12px;
+            gap: 16px;
+            height: 50vh;
             div {
                 border: 1px solid black;
             }
             &.row1 {
-                .page-title {
+                .page-title-box {
                     grid-column: span 4;
             }
                 .text {
