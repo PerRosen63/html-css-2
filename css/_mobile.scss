@@ -4,7 +4,7 @@ figure {
 }
 //image crop
 img {
-    width: 100%;
+    max-width: 100%;
     object-fit: cover;
 }
 
@@ -24,12 +24,16 @@ h1, h2 {
 h2 {
     color: $green;
 }
+.page1 p {
+    font-family: 'Jockey One', sans-serif;
+}
 
 header {
     padding: 0 12px;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     background-color: #000000;
     position: sticky;
+    z-index: 1;
     width: calc(100% - 24px);
     display: flex;
     flex-direction: row-reverse;
@@ -106,13 +110,14 @@ input:checked + div .navmenu {
 article {
     padding-left: 16px;
     padding-right: 16px;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 &.page1 {
+    background-color: $yellow;
     min-height: 100vh;
     display: grid;
 }                        
     .row1 {
-        border: 1px solid orange;
+        /*border: 1px solid orange;*/
         .page-title-box {
             display: flex;
             justify-content: end;
@@ -120,16 +125,20 @@ article {
             background-color: $black;
             h2 {
                 position: relative;
+                font-size: 7rem;
                 .span1, .span2 {
                     position: absolute;
+                    font-size: 2.8rem;
                 }
                 .span1 {
-                    right: 0;
-                    top: -30px;
+                    right: 3px;
+                    top: -20px;
+                    color: $blue;
                 }
                 .span2 {
-                    left: 0;
-                    top: 30px;
+                    left: 16px;
+                    top: 90px;
+                    color: $yellow;
                 }
             }
         }
@@ -142,7 +151,7 @@ article {
     background-color: green;
 }                        
     section {
-        border: 1px solid orange;
+        /*border: 1px solid orange;*/
         .menu-wrapper {
             display: grid;
             grid-template-columns: repeat(11, 1fr);

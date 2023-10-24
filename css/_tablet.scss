@@ -3,7 +3,7 @@ main {
 }
 header {
     position: fixed;
-    width: calc( 100% / 12 - 30px );
+    width: calc( 100% / 12 - 32px );
     height: 100vh;
     min-height: 650px;
     padding: 16px;
@@ -27,18 +27,18 @@ header {
     }
 }
 main {
-    background-color: grey;
     article {
         section {
             display: grid;
             grid-template-columns: repeat(12, 1fr);    
             gap: 16px;
             height: 50vh;
-            div {
+            /*div {
                 border: 1px solid black;
-            }
+            }*/
             &.row1 {
                 .page-title-box {
+                    box-shadow: 16px 0 0 black;
                     grid-column: span 4;
             }
                 .text {
@@ -48,6 +48,9 @@ main {
             &.row2 {
                 .image {
                     grid-column: span 5;
+                    img {
+                        height: 50vh;
+                    }
             }
                 .text {
                     grid-column: span 6;
