@@ -266,20 +266,25 @@ article {
 }
 
 /*Page2*************************************/
-
+.page2 .imagebox {
+    margin-top: 16px;
+    img {
+        height: 35vh;
+    }
+}
 .page2 {
     background-color: $yellow;
-    .menu-wrapper {
+    .food-menu-wrapper {
         display: grid;
         grid-template-columns: repeat(11, 1fr);
-        grid-template-rows: repeat(14, 1fr);
+        grid-template-rows: repeat(14, auto);
         grid-auto-flow: dense;
-            .menu-item {
+            /*.menu-item {
                 align-self: baseline;
-            }
+            */
             .menu-item:nth-child(3n+1) {
                 background-color: white;
-                grid-column: span 10;
+                grid-column: span 9;
                 margin-top: 5px;
                 span {
                     padding: 0 10px;
@@ -287,15 +292,14 @@ article {
             }
             .menu-item:nth-child(3n+2) {
                 background-color: white;
-                grid-column: span 10;
+                grid-column: span 9;
             }
             .menu-item:nth-child(3n+3) {
                 background-color: white;
-                grid-column: span 1;
+                grid-column: span 2;
                 grid-row: span 2;
                 margin-top: 5px;
-                margin-bottom: 5px;
-                align-self: normal;
+                /*align-self: normal;*/
             }
     }   
 }                        
