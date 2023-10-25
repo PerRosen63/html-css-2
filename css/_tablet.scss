@@ -1,10 +1,20 @@
 //fonts
+
+h1 {
+    font-size: 2rem;
+}
+
 .page1 p {
-    font-size: 2.7rem;
+    font-size: 2.8vmax;
     text-align: initial;
 }
 
 /*Header*************************************/
+
+.dummy {
+    display: block;
+}
+
 header {
     position: fixed;
     width: calc( 100% / 12 );
@@ -47,7 +57,7 @@ section {
     margin-top: 0;
     .page-title-box {
         box-shadow: 16px 0 0 black;
-        grid-column: span 4;
+        grid-column: span 5;
         justify-content: end;
         h2 {
             margin-top: 0;
@@ -66,7 +76,7 @@ section {
         }
     }
     .text {
-        grid-column: span 7;
+        grid-column: span 6;
     }
 }
 .row2 {
@@ -85,6 +95,9 @@ section {
     .text {
         grid-column: span 6;
         margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         .arrow2 {
             margin-top: 0;
             text-align: left;

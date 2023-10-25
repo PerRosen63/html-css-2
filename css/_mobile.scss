@@ -3,9 +3,10 @@ html {
     scroll-behavior: smooth;
   }  
 
-//reset margin
+//reset
 * {
     margin: 0;
+    padding: 0;
 }
 a {
     text-decoration: none;
@@ -47,7 +48,18 @@ h2 {
     text-align: center;
 }
 
+body {
+    background-color: rgba(0, 0, 0, 0.8);
+    .container {
+        margin: 0 auto;
+    }
+}
+
 /*Header*************************/
+
+.dummy {
+    display: none;
+}
 
 header {
     padding: 0 16px;
@@ -65,21 +77,21 @@ header {
         align-items: center;
         input {
             position: absolute;
-            width: 50px;
-            height: 50px;
+            width: 36px;
+            height: 36px;
             opacity: 0;
             cursor: pointer;
         }
         div {
             button {
             background-color: transparent;
-            width: 50px;
-            height: 50px;
+            width: 36px;
+            height: 36px;
             border: 0;
             pointer-events: none;
                 span {
                     display: block;
-                    width: 36px;
+                    width: 100%;
                     height: 6px;
                     background-color: yellow;
                     border-radius: 6px;
@@ -141,7 +153,10 @@ article {
 
 .page1 {
     background-color: $yellow;
-    display: grid;    
+    display: grid;
+    .text {
+        overflow: auto;
+    }    
 }
 
 .row1 {
@@ -282,7 +297,12 @@ article {
     }
 }
 
-@media screen and (max-width: 679px) {
+@media screen and (max-width: 767px) {
+
+        .container {
+        max-width: 480px;
+    } 
+    
     [id]::before {
         content: '';
         display: block;

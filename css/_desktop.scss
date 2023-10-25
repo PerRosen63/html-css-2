@@ -1,11 +1,32 @@
+//fonts
+
+h1 {
+    font-size: 3rem;
+}
+.page1 p {
+    font-size: 2.6rem;
+}
+
 body {
-    background-color: rgba(0, 0, 0, 0.5);
     .container {
     max-width: 1440px;
-    margin: 0 auto;
     header {
         width: 118px;
     }
 } 
+}
+
+header nav, header nav div button {
+    width: 60px;
+    height: 60px;
+}
+
+.page1 .row1 {
+    .page-title-box {
+        grid-column: span 4;
+    }
+    .text {
+        grid-column: span 7;
+    }
 }
 
