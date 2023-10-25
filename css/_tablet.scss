@@ -28,8 +28,15 @@ header {
         div {
             .navmenu {
             top: 0;
-            left: 8.3%;
-            width: 91.7%;
+                .menu-wrapper {
+                    background-color: #ac76ff;
+                    height: 100vh;                    
+                    max-width: 100%;
+                    margin-left: 8.3333%;
+                    ul {
+                        margin-bottom: 0;
+                    }
+                }
             }
         }    
     }
@@ -89,7 +96,12 @@ section {
         }
         .arrow1 {
             left: 15px;
-            bottom: 15px;
+            bottom: 20px;
+            transition: bottom 0.3s;
+        }
+        .arrow1:hover {
+            bottom: 10px;
+            transition: bottom 1s;
         }
 }
     .text {

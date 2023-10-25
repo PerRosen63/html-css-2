@@ -16,7 +16,12 @@ body {
 } 
 }
 
-header nav, header nav div button {
+header nav div .navmenu .menu-wrapper {
+    max-width: 1322px;
+    margin-left: 118px;
+}
+
+header nav, header nav input, header nav div button {
     width: 60px;
     height: 60px;
 }
