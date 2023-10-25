@@ -3,8 +3,8 @@ html {
     scroll-behavior: smooth;
   }  
 
-//reset figure, p
-figure, p {
+//reset margin
+* {
     margin: 0;
 }
 a {
@@ -43,7 +43,7 @@ h2 {
 }
 .page1 p {
     font-family: 'Jockey One', sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     text-align: center;
 }
 
@@ -59,9 +59,6 @@ header {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-around;
-    & > * {
-        border: 1px solid red;
-    }
     nav {
         position: relative;
         display: flex;
@@ -144,11 +141,11 @@ article {
 
 .page1 {
     background-color: $yellow;
-    min-height: 100vh;
     display: grid;    
 }
 
 .row1 {
+    margin-top: 16px;
     .page-title-box {
         padding: 16px;
         display: flex;
@@ -156,20 +153,21 @@ article {
         align-items: center;
         background-color: $black;
         h2 {
+            margin-top: 16px;
             position: relative;
-            font-size: 7rem;
+            font-size: 5rem;
             .span1, .span2 {
                 position: absolute;
-                font-size: 2.8rem;
+                font-size: 2rem;
             }
             .span1 {
-                right: 3px;
-                top: -20px;
+                right: 2px;
+                top: -13px;
                 color: $blue;
             }
             .span2 {
-                left: 16px;
-                top: 90px;
+                left: 10px;
+                top: 64px;
                 color: $yellow;
             }
         }
@@ -186,10 +184,13 @@ article {
 .row2 {
     .imagebox {
         position: relative;
+            img {
+                height: auto;
+            }
         .arrow1 {
             position: absolute;
-            left: 15px;
-            bottom: 15px;
+            left: 4px;
+            bottom: 75%;
             img {
                 transform: rotate(90deg);
             }
@@ -200,11 +201,19 @@ article {
     color: $blue;
     background-color: $white;
     padding: 16px;
-    .arrow2 a {
-        font-family: $font1;
-        font-size: 2.5rem;
-        text-transform: uppercase;
-        color: $black;
+    margin-top: 16px;
+    .arrow2 {
+        margin-top: 10px;
+        text-align: center;
+        a {
+            font-family: $font1;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            color: $black;
+            img {
+                width: 20px;
+            }
+    } 
     }
 }
 
@@ -271,4 +280,15 @@ article {
             display: flex;
         }
     }
+}
+
+@media screen and (max-width: 679px) {
+    [id]::before {
+        content: '';
+        display: block;
+        height:      120px;
+        margin-top: -120px;
+        visibility: hidden;
+      }
+    
 }
