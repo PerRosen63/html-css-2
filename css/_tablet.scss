@@ -128,7 +128,7 @@ section {
 
 .menu-section {
     grid-template-columns: repeat(11, 1fr);
-    grid-template-rows: 35vh 65vh;
+    grid-template-rows: 35vh auto;
     margin-left: 8.33333%;
     div:nth-child(1) {
         grid-column: span 3;

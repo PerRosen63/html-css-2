@@ -38,13 +38,17 @@ h1, .menu-wrapper ul li a {
     color: $white;
     font-size: 3rem;
 }
-h1, h2, .menu-wrapper ul li a {
+h1, h2, h3, .menu-wrapper ul li a {
     text-transform: uppercase;
     font-family: $font1;
 }
 h2 {
     color: $green;
 }
+h3 {
+    font-size: 1.4rem;
+}
+
 .page1 p {
     font-family: $font1;
     font-size: 1.2rem;
@@ -282,6 +286,9 @@ article {
             /*.menu-item {
                 align-self: baseline;
             */
+            .menu-item {
+                display: flex;
+            }
             .menu-item:nth-child(3n+1) {
                 background-color: white;
                 grid-column: span 9;
