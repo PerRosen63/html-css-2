@@ -7,11 +7,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Roboto+Condensed:wght@100;400&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Roboto+Condensed:wght@100;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+  </style>
   <div class="container">
     <header>
       <nav>
@@ -26,7 +36,7 @@
             <div class="menu-wrapper">
               <ul>
                 <li>
-                  <a href="#sid1">Home</a>
+                  <a href="http://127.0.0.1:5500/">Home</a>
                 </li>
                 <li>
                   <a href="#sid2">Menu</a>
@@ -80,7 +90,9 @@
         </section>
       </article>
       <article class="page2" id="sid2">
+        <h2 class="hide">Menu</h2>
         <section class="menu-section">
+          
           <div class="imagebox">
             <figure>
               <img width="480" height="600" src="\assets\photos\edgar-castrejon-1SPu0KT-Ejg-unsplash.jpg" alt="Bild med gurksallad">
@@ -124,33 +136,33 @@
           </div>
         </section>
       </article>
-      <article class="page3">
+      <article class="page3" id="sid3">
         <section class="booking">
           <div class="form-column">
-            <h2>Book yor table</h2>
+            <h2>Book your table</h2>
             <form action="">
               <div>
                 <label for="">Name</label>
                 <input type="text">  
               </div>
               <div>
-                <label for="">Name</label>
+                <label for="">Email</label>
                 <input type="text">  
               </div>
               <div>
-                <label for="">Name</label>
+                <label for="">Phone</label>
                 <input type="text">  
               </div>
               <div>
-                <label for="">Name</label>
+                <label for="">Date</label>
                 <input type="text">  
               </div>
               <div>
-                <label for="">Name</label>
+                <label for="">Party size</label>
                 <input type="text">  
               </div>
               <div>
-                <label for="">Name</label>
+                <label for="">Allergies</label>
                 <input type="text">  
               </div>
               <div>
@@ -160,10 +172,17 @@
             </form>
           </div>  
           <div class="contact-column">
-            <div>
-              <p><span>icon</span>telefon</p>
-              <p><span>icon</span>epost</p>
-              <p><span>icon</span>adress</p>
+            <div class="bg-img"></div>
+            <div class="bg-img-text">
+              <p><span class="material-symbols-outlined">
+                call
+                </span>telefon</p>
+              <p><span class="material-symbols-outlined">
+                alternate_email
+                </span>epost</p>
+              <p><span class="material-symbols-outlined">
+                location_on
+                </span>adress</p>
             </div>
           </div>
         </section>
@@ -172,7 +191,7 @@
     <div class="cookie-banner">
       <div class="cookie-row">
         <div class="cookie-text">
-          cokkie text
+          You should accept cookies
         </div>
         <div class="cookie-btns">
           <div class="decline">knapp</div>

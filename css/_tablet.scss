@@ -128,12 +128,13 @@ section {
 
 .page2 {
     height: 100vh;
+    margin-left: 8.33333%
 }
 
 .menu-section {
     grid-template-columns: repeat(11, 1fr);
     grid-template-rows: 40vh auto;
-    margin-left: 8.33333%;
+    /*margin-left: 8.33333%;*/
     div:nth-child(1) {
         grid-column: span 3;
     }
@@ -178,6 +179,8 @@ section {
         display: flex;
         flex-direction: row;
         align-items: center;
+        min-height: 100vh;
+        box-shadow: 16px 0 0 $green;
         .form-column, .contact-column {
             width: 50%;
         }

@@ -38,40 +38,47 @@ h1, .menu-wrapper ul li a {
     color: $white;
     font-size: 3rem;
 }
-h1, h2, h3, .menu-wrapper ul li a {
+h1, h2, h3, label, .menu-wrapper ul li a {
     text-transform: uppercase;
     font-family: $font1;
 }
 h2 {
-    color: $green;
+    font-size: 2.8rem;
+    color: $black;
 }
 h3, .menu-item:nth-child(3n+3) {
     font-size: 1.3rem;
     font-family: $font1;
-    font-weight: 500;
 }
-.menu-item:nth-child(3n+2) {
+.menu-item:nth-child(3n+2), .cookie-text {
     font-family: $font2;
     font-size: 1rem;
-    font-weight: 500;
 }
-
 .page1 p {
     font-family: $font1;
     font-size: 1.2rem;
     text-align: center;
 }
 
+//Font weight
+h1, h2, h3, .menu-item:nth-child(3n+3), .menu-wrapper ul li a, .page1 p {
+    font-weight: 400;
+}
+.menu-item:nth-child(3n+2), .cookie-text {
+    font-weight: 500;
+}
+
 body {
     background-color: rgba(0, 0, 0, 0.8);
     .container {
         margin: 0 auto;
+        position: relative;
     }
 }
 
 /*Header*************************/
 
-.dummy {
+.dummy { 
     display: none;
 }
 
@@ -215,6 +222,7 @@ article {
             margin-top: 16px;
             position: relative;
             font-size: 5rem;
+            color: $green;
             .span1, .span2 {
                 position: absolute;
                 font-size: 2rem;
@@ -277,6 +285,9 @@ article {
 }
 
 /*Page2*************************************/
+.hide {
+    display: none;
+}
 .page2 .imagebox {
     margin-top: 16px;
     img {
@@ -355,12 +366,33 @@ article {
      
 /*Page3*************************************/
 
-.page3 {
-    background-color: $green;
-    form {
-        > div {
-            display: flex;
-            justify-content: space-between;
+.page3 {    
+    .booking {
+        background-color: $green;
+        min-height: calc(100vh - 120px);
+        .form-column, .contact-column {
+            padding: 16px;
+            form {
+                > div {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+        .contact-column {
+            position: relative;
+        }
+        .bg-img {
+            height: 60vh;
+            background: white url(https://images.unsplash.com/photo-1574966739987-65e38db0f7ce) no-repeat center/cover;
+            z-index: 0;
+            filter: blur(6px);
+        }
+        .bg-img-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 1;
         }
     }
 }
@@ -371,6 +403,7 @@ article {
     background-color: $blue;
     width: 100%;
     height: 50px;
+    position: absolute;
     z-index: 999;
     bottom: 0;
     .cookie-row {
