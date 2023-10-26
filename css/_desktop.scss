@@ -6,9 +6,13 @@ h1 {
 .page1 p {
     font-size: 2.6rem;
 }
-h3 {
+h3, .menu-item:nth-child(3n+3) {
     font-size: 2.6rem;
 }
+.menu-item:nth-child(3n+2) {
+    font-size: 1.3rem;
+}
+
 
 body {
     .container {

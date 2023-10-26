@@ -31,7 +31,7 @@ $yellow: #ffe951;
 $blue: rgba(169, 116, 255, 1);
 $black: rgba(0, 0, 0, 1);
 $font1: 'Jockey One', sans-serif;
-$font2: 'Roboto Condensed';
+$font2: 'Roboto Condensed', sans-serif;
 
 //fonts
 h1, .menu-wrapper ul li a {
@@ -45,8 +45,15 @@ h1, h2, h3, .menu-wrapper ul li a {
 h2 {
     color: $green;
 }
-h3 {
-    font-size: 1.4rem;
+h3, .menu-item:nth-child(3n+3) {
+    font-size: 1.3rem;
+    font-family: $font1;
+    font-weight: 500;
+}
+.menu-item:nth-child(3n+2) {
+    font-family: $font2;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 .page1 p {
@@ -273,7 +280,7 @@ article {
 .page2 .imagebox {
     margin-top: 16px;
     img {
-        height: 35vh;
+        height: 40vh;
     }
 }
 .page2 {
@@ -288,24 +295,59 @@ article {
             */
             .menu-item {
                 display: flex;
+                align-items: center;
+                padding: 5px;
+                border-top: 2px solid black;
+                border-bottom: 2px solid black;
             }
             .menu-item:nth-child(3n+1) {
                 background-color: white;
                 grid-column: span 9;
-                margin-top: 5px;
+                margin-top: 10px;
+                border-bottom: none;
                 span {
+                    text-transform: uppercase;
+                    font-family: 'Courier New', Courier, monospace;
+                    font-weight: 600;
+                    line-height: 0.9;
                     padding: 0 10px;
+                    margin-left: 10px;
+                    position: relative;
+                    z-index: 0;
+                }
+                span.purple::after {
+                    background-color: $blue;
+                    transform: rotate(4deg);
+                }
+                span.green::after {
+                    background-color: $green;
+                    transform: rotate(-4deg);
+                }
+                span.yellow::after {
+                    background-color: $yellow;
+                    transform: rotate(-2deg);
+                }
+                span::after {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    left: 0;
+                    content: "";
+                    z-index: -1;
                 }
             }
             .menu-item:nth-child(3n+2) {
                 background-color: white;
                 grid-column: span 9;
+                padding-top: 0;
+                border-top: none;
             }
             .menu-item:nth-child(3n+3) {
                 background-color: white;
                 grid-column: span 2;
                 grid-row: span 2;
-                margin-top: 5px;
+                margin-top: 10px;
+                justify-content: flex-end;
                 /*align-self: normal;*/
             }
     }   
@@ -326,7 +368,7 @@ article {
 /*Cookie banner********************************/
 
 .cookie-banner {
-    background-color: rgba(0, 0, 255, 0.9);
+    background-color: $blue;
     width: 100%;
     height: 50px;
     z-index: 999;

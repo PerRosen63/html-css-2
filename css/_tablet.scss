@@ -126,9 +126,13 @@ section {
 
 /*Page2***************************/
 
+.page2 {
+    height: 100vh;
+}
+
 .menu-section {
     grid-template-columns: repeat(11, 1fr);
-    grid-template-rows: 35vh auto;
+    grid-template-rows: 40vh auto;
     margin-left: 8.33333%;
     div:nth-child(1) {
         grid-column: span 3;
@@ -143,6 +147,7 @@ section {
         .menu-item:nth-child(3n+1) {
             background-color: white;
             grid-column: span 4;
+            border-bottom: 2px solid black;
             span {
                 padding: 0 10px;
             }
@@ -150,7 +155,9 @@ section {
         .menu-item:nth-child(3n+2) {
             background-color: white;
             grid-column: span 6;
-            margin-top: 5px;
+            margin-top: 10px;
+            padding-top: 5px;
+            border-top: 2px solid black;
         }
         .menu-item:nth-child(3n+3) {
             background-color: white;
@@ -166,6 +173,7 @@ section {
 
 .page3 {
     margin-left: 8.33333%;
+    border-top: 1px solid black;
     .booking {
         display: flex;
         flex-direction: row;
