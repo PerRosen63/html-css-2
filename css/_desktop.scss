@@ -3,12 +3,16 @@
 h1 {
     font-size: 3rem;
 }
+
 .page1 p {
     font-size: 2.6rem;
 }
-h3, .menu-item:nth-child(3n+3) {
+
+h3,
+.menu-item:nth-child(3n+3) {
     font-size: 2.6rem;
 }
+
 .menu-item:nth-child(3n+2) {
     font-size: 1.3rem;
 }
@@ -16,11 +20,12 @@ h3, .menu-item:nth-child(3n+3) {
 
 body {
     .container {
-    max-width: 1440px;
-    header {
-        width: 120px;
+        max-width: 1440px;
+
+        header {
+            width: 120px;
+        }
     }
-} 
 }
 
 header nav div .navmenu .menu-wrapper {
@@ -28,7 +33,9 @@ header nav div .navmenu .menu-wrapper {
     margin-left: 118px;
 }
 
-header nav, header nav input, header nav div button {
+header nav,
+header nav input,
+header nav div button {
     width: 60px;
     height: 60px;
 }
@@ -37,8 +44,8 @@ header nav, header nav input, header nav div button {
     .page-title-box {
         grid-column: span 4;
     }
+
     .text {
         grid-column: span 7;
     }
 }
-
