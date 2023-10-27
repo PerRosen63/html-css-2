@@ -32,7 +32,14 @@ $blue: rgba(169, 116, 255, 1);
 $black: rgba(0, 0, 0, 1);
 $font1: 'Jockey One', sans-serif;
 $font2: 'Roboto Condensed', sans-serif;
-
+//Google icons
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
 //fonts
 h1, .menu-wrapper ul li a {
     color: $white;

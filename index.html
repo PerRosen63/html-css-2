@@ -6,28 +6,17 @@
   <title>Tough Cookie</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Roboto+Condensed:wght@100;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
-  <style>
-    .material-symbols-outlined {
-      font-variation-settings:
-      'FILL' 0,
-      'wght' 400,
-      'GRAD' 0,
-      'opsz' 24
-    }
-  </style>
   <div class="container">
     <header>
       <nav>
         <input type="checkbox" />
         <div>
-          <button>
+          <button aria-label="Click">
             <span></span>
             <span></span>
             <span></span>
@@ -36,7 +25,7 @@
             <div class="menu-wrapper">
               <ul>
                 <li>
-                  <a href="http://127.0.0.1:5500/">Home</a>
+                  <a href="#">Home</a>
                 </li>
                 <li>
                   <a href="#sid2">Menu</a>
@@ -69,7 +58,7 @@
           <div></div>
           <div class="imagebox">
             <figure class="lettuce">
-              <img width="650" height="519" src="https://images.unsplash.com/photo-1556801712-76c8eb07bbc9?w=640" alt="Bild på sallat">
+              <img width="650" height="519" src="assets\photos\mae-mu-hugb85v0J04-unsplash.jpg" alt="Bild på sallat">
             </figure>
             <div class="arrow1">
               <a href="#sid2">
@@ -95,7 +84,7 @@
           
           <div class="imagebox">
             <figure>
-              <img width="480" height="600" src="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?auto=format&fit=crop&q=80&w=1964&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=640" alt="Bild med gurksallad">
+              <img width="480" height="600" src="assets/photos/edgar-castrejon-1SPu0KT-Ejg-unsplash.jpg">
               <figcaption></figcaption>
             </figure>
           </div>
@@ -124,13 +113,13 @@
           </div>
           <div class="imagebox">
             <figure>
-              <img width="480" height="371" src="https://images.unsplash.com/photo-1608480695771-c4bb16a829d1?auto=format&fit=crop&q=80&w=1951&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?w=640" alt="Bild med vitlök och chili">
+              <img width="480" height="371" src="assets\photos\kao-rodriguez-IeTzHiuepmU-unsplash.jpg" alt="Bild med vitlök och chili">
               <figcaption></figcaption>
             </figure>
           </div>
           <div class="imagebox">
             <figure>
-              <img width="480" height="640" src="https://images.unsplash.com/photo-1591120583691-49d2741e55da?w=640" alt="Bild med raijta">
+              <img width="480" height="640" src="assets\photos\mor-shani-kQloRmVQYIs-unsplash.jpg" alt="Bild med raijta">
               <figcaption></figcaption>
             </figure>
           </div>
@@ -142,28 +131,28 @@
             <h2>Book your table</h2>
             <form action="">
               <div>
-                <label for="">Name</label>
-                <input type="text">  
+                <label for="name">Name</label>
+                <input id="name" type="text">  
               </div>
               <div>
-                <label for="">Email</label>
-                <input type="text">  
+                <label for="email">Email</label>
+                <input id="email" type="text">  
               </div>
               <div>
-                <label for="">Phone</label>
-                <input type="text">  
+                <label for="phone">Phone</label>
+                <input id="phone" type="text">  
               </div>
               <div>
-                <label for="">Date</label>
-                <input type="text">  
+                <label for="date">Date</label>
+                <input id="date" type="text">  
               </div>
               <div>
-                <label for="">Party size</label>
-                <input type="text">  
+                <label for="size">Party size</label>
+                <input id="size" type="text">  
               </div>
               <div>
-                <label for="">Allergies</label>
-                <input type="text">  
+                <label for="allergy">Allergies</label>
+                <input id="allergy" type="text">  
               </div>
               <div>
                 <input type="button" value=""> 
