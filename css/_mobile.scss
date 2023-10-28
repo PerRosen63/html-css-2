@@ -54,14 +54,20 @@ h1,
 h2,
 h3,
 label,
+input[type=button],
+.cookie-btns > div,
 .menu-wrapper ul li a {
     text-transform: uppercase;
     font-family: $font1;
 }
 
 h2 {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     color: $black;
+}
+
+h2.page-title {
+    font-size: 2.8rem;
 }
 
 h3,
@@ -70,10 +76,20 @@ h3,
     font-family: $font1;
 }
 
+label, 
+input[type=button] {
+    font-size: 1.4rem;
+}
+
 .menu-item:nth-child(3n+2),
+form input,
 .cookie-text {
     font-family: $font2;
     font-size: 1rem;
+}
+
+.cookie-text {
+    color: $white;
 }
 
 .page1 p {
@@ -88,7 +104,8 @@ h2,
 h3,
 .menu-item:nth-child(3n+3),
 .menu-wrapper ul li a,
-.page1 p {
+.page1 p,
+label {
     font-weight: 400;
 }
 
@@ -96,6 +113,8 @@ h3,
 .cookie-text {
     font-weight: 500;
 }
+
+/*Body******************/
 
 body {
     background-color: rgba(0, 0, 0, 0.8);
@@ -448,10 +467,32 @@ article {
         .contact-column {
             padding: 16px;
 
+            h2 {
+                margin-bottom: 30px;
+                text-align: center;
+            }
+       
             form {
                 >div {
                     display: flex;
-                    justify-content: space-between;
+                    flex-direction: column;
+                    margin-bottom: 1.2rem;
+
+                    input {
+                        border: none;
+                        border-radius: 15px;
+                        height: 2.2rem;   
+                        padding: 0 5px; 
+                    }
+
+                    input[value=Cancel] {
+                        background-color: $blue;
+                        margin-bottom: 20px;
+                    }
+            
+                    input[value=Request] {
+                        background-color: $yellow;
+                    }
                 }
             }
         }
