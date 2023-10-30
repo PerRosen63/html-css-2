@@ -124,6 +124,7 @@ form input,
 .bg-img-text ul li {
     font-family: $font1;
     color: $blue;
+
     span {
         font-size: 2.6rem;
     }
@@ -204,6 +205,7 @@ header {
                     border-radius: 6px;
                     margin-bottom: 6px;
                 }
+
                 span:last-child {
                     margin-bottom: 0;
                 }
@@ -520,7 +522,7 @@ article {
                         padding: 0 5px;
                     }
 
-                    input[type=button], 
+                    input[type=button],
                     input[type=reset] {
                         cursor: pointer;
                     }
@@ -558,10 +560,12 @@ article {
             display: flex;
             align-items: center;
             justify-content: center;
+
             ul li {
                 display: flex;
                 align-items: center;
                 text-shadow: -2px -2px $black;
+
                 span {
                     padding: 10px;
                 }
@@ -620,17 +624,17 @@ article {
         max-width: 480px;
     }
 
-/*bottenram matmenysida*/
+    /*bottenram matmenysida*/
     .menu-section .imagebox:last-child {
         padding-bottom: 16px;
     }
 
-/*toppmarginal bokningssida (vit ram)*/
-    .booking .form-column { 
+    /*toppmarginal bokningssida (vit ram)*/
+    .booking .form-column {
         margin-top: 16px;
     }
 
-/*offset ankarlänkar vid sticky header*/
+    /*offset ankarlänkar vid sticky header*/
     [id]::before {
         content: '';
         display: block;
