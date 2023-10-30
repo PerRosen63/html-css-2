@@ -7,6 +7,25 @@ $black: rgba(0, 0, 0, 1);
 $font1: 'Jockey One', sans-serif;
 $font2: 'Roboto Condensed', sans-serif;
 
+//Hide, but not for  screen readers
+.hidden {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+    clip: rect(1px, 1px, 1px, 1px);
+    /*maybe deprecated but we need to support legacy browsers */
+    clip-path: inset(50%);
+    /*modern browsers, clip-path works inwards from each corner*/
+    white-space: nowrap;
+    /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
+}
+
 //smooth scroll
 html {
     scroll-behavior: smooth;
@@ -55,7 +74,8 @@ h2,
 h3,
 label,
 input[type=button],
-.cookie-btns > div,
+input[type=reset],
+.cookie-btns button,
 .menu-wrapper ul li a {
     text-transform: uppercase;
     font-family: $font1;
@@ -76,8 +96,11 @@ h3,
     font-family: $font1;
 }
 
-label, 
-input[type=button] {
+label,
+input[type=button],
+input[type=reset],
+.bg-img-text ul li,
+.cookie-btns button {
     font-size: 1.4rem;
 }
 
@@ -96,6 +119,14 @@ form input,
     font-family: $font1;
     font-size: 1.2rem;
     text-align: center;
+}
+
+.bg-img-text ul li {
+    font-family: $font1;
+    color: $blue;
+    span {
+        font-size: 2.6rem;
+    }
 }
 
 //Font weight
@@ -471,7 +502,7 @@ article {
                 margin-bottom: 30px;
                 text-align: center;
             }
-       
+
             form {
                 >div {
                     display: flex;
@@ -481,15 +512,20 @@ article {
                     input {
                         border: none;
                         border-radius: 15px;
-                        height: 2.2rem;   
-                        padding: 0 5px; 
+                        height: 2.2rem;
+                        padding: 0 5px;
+                    }
+
+                    input[type=button], 
+                    input[type=reset] {
+                        cursor: pointer;
                     }
 
                     input[value=Cancel] {
                         background-color: $blue;
                         margin-bottom: 20px;
                     }
-            
+
                     input[value=Request] {
                         background-color: $yellow;
                     }
@@ -505,14 +541,27 @@ article {
             height: 60vh;
             background: white url('https://medieinstitutet.github.io/fed23d-html-css-inlamningsuppgift-2-PerRosen63/assets/photos/ronan-kruithof-PCE0T5i4pDI-unsplash.jpg') no-repeat center/cover;
             z-index: 0;
-            filter: blur(6px);
+            filter: blur(3px);
         }
 
         .bg-img-text {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            ul li {
+                display: flex;
+                align-items: center;
+                text-shadow: -2px -2px $black;
+                span {
+                    padding: 10px;
+                }
+            }
         }
     }
 }
@@ -522,18 +571,39 @@ article {
 .cookie-banner {
     background-color: $blue;
     width: 100%;
-    height: 50px;
     position: absolute;
     z-index: 999;
     bottom: 0;
 
     .cookie-row {
+        padding: 16px 32px;
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        height: 100px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
 
         .cookie-btns {
             display: flex;
+
+            button {
+                width: 150px;
+                border-radius: 15px;
+                height: 2.2rem;
+                padding: 0 5px;
+                cursor: pointer;
+                border: none;
+
+                &.decline {
+                    margin: 10px 10px 10px 0;
+                    background-color: $yellow;
+                }
+
+                &.accept {
+                    margin: 10px 0 10px 10px;
+                    background-color: $green;
+                }
+            }
         }
     }
 }

@@ -160,26 +160,26 @@
               </div>
               <div>
                 <label for="email">Email</label>
-                <input id="email" type="text">
+                <input id="email" type="email">
               </div>
               <div>
                 <label for="phone">Phone</label>
-                <input id="phone" type="text">
+                <input id="phone" type="tel">
               </div>
               <div>
                 <label for="date">Date</label>
-                <input id="date" type="text">
+                <input id="date" type="date">
               </div>
               <div>
                 <label for="size">Party size</label>
-                <input id="size" type="text">
+                <input id="size" type="number">
               </div>
               <div>
                 <label for="allergy">Allergies</label>
                 <input id="allergy" type="text">
               </div>
               <div>
-                <input type="button" value="Cancel">
+                <input type="reset" value="Cancel">
                 <input type="button" value="Request">
               </div>
             </form>
@@ -187,15 +187,17 @@
           <div class="contact-column">
             <div class="bg-img"></div>
             <div class="bg-img-text">
-              <p><span class="material-symbols-outlined">
-                  call
-                </span>telefon</p>
-              <p><span class="material-symbols-outlined">
-                  alternate_email
-                </span>epost</p>
-              <p><span class="material-symbols-outlined">
-                  location_on
-                </span>adress</p>
+              <ul>
+                <li><span class="hidden">Telefon</span><span class="material-symbols-outlined">
+                    call
+                  </span>+46 8123 45 67</li>
+                <li><span class="hidden">Epost</span><span class="material-symbols-outlined">
+                    alternate_email
+                  </span>book@toughcookie.com</li>
+                <li><span class="hidden">Adress</span><span class="material-symbols-outlined">
+                    location_on
+                  </span>Brända Tomten <br>111 31 Stockholm</li>
+              </ul>
             </div>
           </div>
         </section>
@@ -207,8 +209,8 @@
           You should accept cookies
         </div>
         <div class="cookie-btns">
-          <div class="decline">knapp</div>
-          <div class="accept">knapp</div>
+          <button type="button" class="decline">Decline</button>
+          <button type="button" class="accept">Accept</button>
         </div>
       </div>
     </div>
