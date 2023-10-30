@@ -192,6 +192,7 @@ header {
                 background-color: transparent;
                 width: 36px;
                 height: 36px;
+                padding-top: 4px;
                 border: 0;
                 pointer-events: none;
 
@@ -202,6 +203,9 @@ header {
                     background-color: yellow;
                     border-radius: 6px;
                     margin-bottom: 6px;
+                }
+                span:last-child {
+                    margin-bottom: 0;
                 }
             }
 
@@ -608,13 +612,25 @@ article {
     }
 }
 
+/*Endast mobil**************************/
+
 @media screen and (max-width: 767px) {
 
     .container {
         max-width: 480px;
     }
 
-    /*offset ankarlänkar vid sticky header*/
+/*bottenram matmenysida*/
+    .menu-section .imagebox:last-child {
+        padding-bottom: 16px;
+    }
+
+/*toppmarginal bokningssida (vit ram)*/
+    .booking .form-column { 
+        margin-top: 16px;
+    }
+
+/*offset ankarlänkar vid sticky header*/
     [id]::before {
         content: '';
         display: block;

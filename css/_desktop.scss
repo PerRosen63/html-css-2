@@ -71,6 +71,13 @@ header nav div button {
     }
 }
 
+.page2 .food-menu-wrapper .menu-item:nth-child(3n+1) {
+    grid-column: span 4;
+}
+.page2 .food-menu-wrapper .menu-item:nth-child(3n+2) {
+    grid-column: span 6;
+}
+
 .page3 .booking .form-column {
     margin-right: 6%;
 

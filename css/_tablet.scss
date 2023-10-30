@@ -173,7 +173,7 @@ section {
 
         .menu-item:nth-child(3n+1) {
             background-color: white;
-            grid-column: span 4;
+            grid-column: span 5;
             border-bottom: 2px solid black;
 
             span {
@@ -183,7 +183,7 @@ section {
 
         .menu-item:nth-child(3n+2) {
             background-color: white;
-            grid-column: span 6;
+            grid-column: span 5;
             margin-top: 10px;
             padding-top: 5px;
             border-top: 2px solid black;
@@ -203,7 +203,6 @@ section {
 
 .page3 {
     margin-left: 8.33333%;
-    border-top: 1px solid black;
 
     .booking {
         display: flex;
