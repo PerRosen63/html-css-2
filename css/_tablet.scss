@@ -2,6 +2,7 @@
 
 h1 {
     font-size: 5vh;
+    font-size: 4.8vmin;
 }
 
 .page1 p {
@@ -19,7 +20,7 @@ header {
     position: fixed;
     width: calc(100% / 12);
     height: 100vh;
-    min-height: 650px;
+    min-height: 400px;
     padding: 16px;
     flex-direction: column;
     justify-content: space-between;
@@ -64,7 +65,8 @@ section {
 
 .page1 section {
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 50vh;
+    grid-template-rows: auto;
+    min-height: 50vh;
 }
 
 .page1 .row1 {
@@ -106,8 +108,9 @@ section {
         grid-column: span 5;
 
         .lettuce {
+            height: 100%;
             img {
-                height: 50vh;
+                height: 100%;
             }
         }
 
@@ -149,7 +152,7 @@ section {
 /*Page2***************************/
 
 .page2 {
-    height: 100vh;
+    min-height: 100vh;
     margin-left: 8.33333%
 }
 
@@ -157,7 +160,6 @@ section {
     grid-template-columns: repeat(11, 1fr);
     grid-template-rows: 40vh auto;
 
-    /*margin-left: 8.33333%;*/
     div:nth-child(1) {
         grid-column: span 3;
     }
@@ -226,6 +228,7 @@ section {
 
 .cookie-banner .cookie-row {
     height: 9vh;
+    min-height: 60px;
     flex-direction: row;
     margin-left: 8.3333%;
 }
