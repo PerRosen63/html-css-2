@@ -250,7 +250,8 @@ header {
     }
 }
 
-/*Meny toggle*************************/
+/*Menu toggle*************************/
+
 input:checked+div button {
     margin-bottom: 7px;
 }
@@ -296,6 +297,7 @@ main {
 }
 
 /*Content padding******************/
+
 article {
     padding-left: 16px;
     padding-right: 16px;
@@ -401,9 +403,6 @@ article {
 }
 
 /*Page2*************************************/
-.hide {
-    display: none;
-}
 
 .page2 .imagebox {
     margin-top: 16px;
@@ -422,9 +421,6 @@ article {
         grid-template-rows: repeat(14, auto);
         grid-auto-flow: dense;
 
-        /*.menu-item {
-                align-self: baseline;
-            */
         .menu-item {
             display: flex;
             align-items: center;

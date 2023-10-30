@@ -20,20 +20,22 @@ h2 {
 label,
 input[type=button],
 input[type=reset],
-.bg-img-text ul li,  
+.bg-img-text ul li,
 .cookie-btns button {
     font-size: 2.2rem;
 }
 
-.bg-img-text ul li span { /*icons*/
+.bg-img-text ul li span {
+    /*icons*/
     font-size: 4rem;
 }
 
-.menu-item:nth-child(3n+2), 
+.menu-item:nth-child(3n+2),
 .cookie-text {
     font-size: 1.3rem;
 }
 
+/*Total width***************************/
 
 body {
     .container {
@@ -45,6 +47,8 @@ body {
     }
 }
 
+/*Haeder***************************/
+
 header nav div .navmenu .menu-wrapper {
     max-width: 1322px;
     margin-left: 118px;
@@ -55,11 +59,14 @@ header nav input,
 header nav div button {
     width: 65px;
     height: 60px;
+
     span {
         height: 10px;
         margin-bottom: 8px;
     }
 }
+
+/*Page1***************************/
 
 .page1 .row1 {
     .page-title-box {
@@ -71,12 +78,17 @@ header nav div button {
     }
 }
 
+/*Page2***************************/
+
 .page2 .food-menu-wrapper .menu-item:nth-child(3n+1) {
     grid-column: span 4;
 }
+
 .page2 .food-menu-wrapper .menu-item:nth-child(3n+2) {
     grid-column: span 6;
 }
+
+/*Page3***************************/
 
 .page3 .booking .form-column {
     margin-right: 6%;
@@ -108,11 +120,12 @@ header nav div button {
         }
     }
 }
- /*Cookie banner********************************/
+
+/*Cookie banner********************************/
 
 .cookie-banner .cookie-row .cookie-btns button {
     width: 250px;
-    height: 2.8rem;   
+    height: 2.8rem;
     padding: 0 5px;
     line-height: 1;
 }
