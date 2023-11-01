@@ -81,6 +81,12 @@ input[type=reset],
     font-family: $font1;
 }
 
+input[type=button],
+input[type=reset],
+.cookie-btns button {
+    color: $black;
+}
+
 h2 {
     font-size: 2.4rem;
     color: $black;
@@ -124,6 +130,9 @@ form input,
 .bg-img-text ul li {
     font-family: $font1;
     color: $blue;
+    a {
+        color: $blue;
+    }
 
     span {
         font-size: 2.6rem;
@@ -496,8 +505,7 @@ article {
         background-color: $green;
         min-height: calc(100vh - 120px);
 
-        .form-column,
-        .contact-column {
+        .form-column {
             padding: 16px;
 
             h2 {
@@ -518,10 +526,10 @@ article {
                         padding: 0 5px;
                     }
 
-                    input[type=button],
+                    /*input[type=button],
                     input[type=reset] {
                         cursor: pointer;
-                    }
+                    }*/
 
                     input[value=Cancel] {
                         background-color: $blue;
@@ -537,6 +545,7 @@ article {
 
         .contact-column {
             position: relative;
+            padding: 16px;
         }
 
         .bg-img {
@@ -557,7 +566,7 @@ article {
             align-items: center;
             justify-content: center;
 
-            ul li {
+            ul li > * {
                 display: flex;
                 align-items: center;
                 text-shadow: -2px -2px $black;
