@@ -16,7 +16,7 @@ $font2: 'Roboto Condensed', sans-serif;
     height: 1px;
     width: 1px;
     overflow: hidden;
-    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
     /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
     clip: rect(1px, 1px, 1px, 1px);
     /*maybe deprecated but we need to support legacy browsers */
@@ -526,10 +526,10 @@ article {
                         padding: 0 5px;
                     }
 
-                    /*input[type=button],
+                    input[type=button],
                     input[type=reset] {
                         cursor: pointer;
-                    }*/
+                    }
 
                     input[value=Cancel] {
                         background-color: $blue;
